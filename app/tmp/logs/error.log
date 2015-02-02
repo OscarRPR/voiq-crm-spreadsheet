@@ -3481,3 +3481,39 @@ Request URL: /voiq/voiq/customers/search
 Stack Trace:
 #0 /var/www/html/voiq/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-02-02 09:55:48 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /voiq/users/login
+Stack Trace:
+#0 /var/www/html/voiq/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/voiq/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/voiq/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /var/www/html/voiq/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /var/www/html/voiq/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /var/www/html/voiq/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /var/www/html/voiq/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /var/www/html/voiq/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/html/voiq/app/View/Users/login.ctp(7): FormHelper->create()
+#9 /var/www/html/voiq/lib/Cake/View/View.php(961): include('/var/www/html/v...')
+#10 /var/www/html/voiq/lib/Cake/View/View.php(923): View->_evaluate('/var/www/html/v...', Array)
+#11 /var/www/html/voiq/lib/Cake/View/View.php(473): View->_render('/var/www/html/v...')
+#12 /var/www/html/voiq/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /var/www/html/voiq/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /var/www/html/voiq/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /var/www/html/voiq/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-02-02 10:03:16 Error: [MissingActionException] Action CustomersController::upload() could not be found.
+Exception Attributes: array (
+  'controller' => 'CustomersController',
+  'action' => 'upload',
+)
+Request URL: /voiq/customers/upload
+Stack Trace:
+#0 /var/www/html/voiq/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/voiq/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest))
+#2 /var/www/html/voiq/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

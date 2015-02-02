@@ -17,7 +17,7 @@
 				<?php if($current_user['id'] == $user['User']['id']): ?>
 					<?php echo $this->Html->link(__('Update'), array('action' => 'edit', $user['User']['id'])); ?>
 				<?php endif; ?>
-				<?php if($user['User']['role'] != 'Webmaster'): ?>
+				<?php if($user['User']['id'] != $current_user['id']): ?>
 					<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), null, __('You really want to delete the user: %s?', $user['User']['username'])); ?>
 				<?php endif; ?>
 			</td>
