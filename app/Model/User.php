@@ -43,47 +43,47 @@ class User extends AppModel {
 		'username' => array(
 			'between' => array(
 				'rule' => array('between', 1, 50),
-				'message' => 'El nombre de usuario no puede exeder los 50 caracteres.',
+				'message' => 'The username should be between %d and %d characters',
 			),
 			'notempty' => array(
 				'rule' => array('notempty'),
-				'message' => 'El nombre de usuario no puede ser vacio.',
+				'message' => "The username can't be empty.",
 			),
 		),
 		'password' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				'message' => 'La contraseÃ±a no puede ser vacia.',
+				'message' => "The password can't be empty",
 			),
 			'between' => array(
 				'rule' => array('between', 8, 20),
-				'message' => 'La contraseÃ±a debe tener entre 8 y 20 caracteres.',
+				'message' => 'The password should be between %d and %d characters.',
 			),
 			'Match passwords' => array(
 				'rule' => 'matchPasswords',
-				'message' => 'Las contraseÃ±as no son iguales.'
+				'message' => 'The passwords are not the same. Please, verify.'
 			)
 		),
 		'password_confirmation' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				'message' => 'La confirmacion de la contraseÃ±a no puede ser vacia.',
+				'message' => "The password confirmation can't be empty",
 			)
 		),
 		'email' => array(
 			'email' => array(
 				'rule' => array('email'),
-				'message' => 'Por favor ingrese un email valido.',
+				'message' => 'Please, enter a valid email address.',
 			)
 		),
 		'role' => array(
 			'inlist' => array(
 				'rule' => array('inlist', array('Webmaster', 'Agent')),
-				'message' => 'El role del usuario debe ser Analista o Administrador',
+				'message' => 'The user role should be Webmaster or Agent.',
 			),
 			'notempty' => array(
 				'rule' => array('notempty'),
-				'message' => 'El rol del usuario no puede ser vacio.',
+				'message' => "The user role can't be empty",
 			)
 		)
 	);
