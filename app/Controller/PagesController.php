@@ -37,6 +37,14 @@ class PagesController extends AppController {
  */
 	public $uses = array();
 
+
+	public function isAuthorized($user){
+		if($user['role'] == null){
+			return false;
+		}
+		return true;
+	}
+
 /**
  * Displays a view
  *

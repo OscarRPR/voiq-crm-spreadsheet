@@ -23,12 +23,12 @@ class UsersController extends AppController {
 
 		if($user['role'] == 'Agent'){
 			if($this->action == 'view') {
-				if($user['id'] == $this->request->params['pass'][0]) {
+				if($user['id'] === $this->request->params['pass'][0]) {
 					return true;	
 				}	
-				return false;
+				return $this->redirect(array('controller' => 'customers', 'action' => 'search'));
 			}
-			return false;
+			return $this->redirect(array('controller' => 'customers', 'action' => 'search'));
 		}
 		return true;
 	}

@@ -3456,3 +3456,28 @@ Stack Trace:
 #3 /var/www/html/voiq/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-02-02 08:22:50 Error: [CakeException] $controller does not implement an isAuthorized() method.
+Request URL: /voiq/
+Stack Trace:
+#0 /var/www/html/voiq/lib/Cake/Controller/Component/Auth/BaseAuthorize.php(72): ControllerAuthorize->controller(Object(PagesController))
+#1 /var/www/html/voiq/lib/Cake/Controller/Component/AuthComponent.php(502): BaseAuthorize->__construct(Object(ComponentCollection), Array)
+#2 /var/www/html/voiq/lib/Cake/Controller/Component/AuthComponent.php(464): AuthComponent->constructAuthorize()
+#3 /var/www/html/voiq/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#4 [internal function]: AuthComponent->startup(Object(PagesController))
+#5 /var/www/html/voiq/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 /var/www/html/voiq/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /var/www/html/voiq/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /var/www/html/voiq/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /var/www/html/voiq/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#11 /var/www/html/voiq/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-02-02 08:28:27 Error: [MissingControllerException] Controller class VoiqController could not be found.
+Exception Attributes: array (
+  'class' => 'VoiqController',
+  'plugin' => NULL,
+)
+Request URL: /voiq/voiq/customers/search
+Stack Trace:
+#0 /var/www/html/voiq/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

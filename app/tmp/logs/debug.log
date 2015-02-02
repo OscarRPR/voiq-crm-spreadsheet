@@ -2823,3 +2823,13 @@
 2015-02-01 15:32:38 Debug: Here: /voiq/customers/results, coming from: http://localhost/voiq/customers/search
 2015-02-01 16:09:03 Debug: Here: /voiq/customers/search, coming from: http://localhost/voiq/customers/results
 2015-02-01 16:09:03 Debug: Here: /voiq/users/login, coming from: http://localhost/voiq/customers/results
+2015-02-02 08:22:45 Debug: Here: /voiq/, coming from: /
+2015-02-02 08:22:45 Debug: Here: /voiq/users/login, coming from: /
+2015-02-02 08:22:50 Debug: Here: /voiq/users/login, coming from: http://localhost/voiq/users/login
+2015-02-02 08:22:50 Debug: Here: /voiq/, coming from: http://localhost/voiq/users/login
+2015-02-02 08:22:50 Debug: Here: /voiq/, coming from: http://localhost/voiq/users/login
+2015-02-02 08:23:37 Debug: Here: /voiq/, coming from: http://localhost/voiq/users/login
+2015-02-02 08:23:41 Debug: Here: /voiq/users/logout, coming from: http://localhost/voiq/
+2015-02-02 08:23:41 Debug: Here: /voiq/users/login, coming from: http://localhost/voiq/
+2015-02-02 08:23:48 Debug: Here: /voiq/users/login, coming from: http://localhost/voiq/users/login
+2015-02-02 08:23:48 Debug: Here: /voiq/, coming from: http://localhost/voiq/users/login
