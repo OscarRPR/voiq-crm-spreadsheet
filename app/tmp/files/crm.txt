@@ -1,0 +1,2 @@
+Row: 2 Errors: The last name should be between 1 and 80 characters. The email is not valid. 
+Row: 3 Errors: The gender must be Male, Female (case sensitive) or empty. Wrong format of birthdate. The email is not valid. The phone number format doesn't match a US phone number. 
